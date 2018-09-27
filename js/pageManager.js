@@ -80,7 +80,7 @@ function transitionSubpage(subpage, force) {
         if ($(this).text() == subpage) {
             $(this).css("background-color", "rgba(255,255,255,0.35)");
         } else {
-            $(this).css("background-color", "transparent");
+            $(this).removeAttr('style');
         }
     });
 
