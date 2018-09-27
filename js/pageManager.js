@@ -17,7 +17,7 @@ if (location.hash !== null && location.hash !== '') {
     transition('welcome', null, true);
 }
 window.onhashchange = function () {
-    if(!userTransition && !subpageTransition) {
+    if (!userTransition && !subpageTransition) {
         hashTransition();
     }
 };
@@ -26,25 +26,26 @@ window.onhashchange = function () {
 function hashTransition() {
     var pageName = location.hash.split('.')[0].substring(1);
     var subPageName = location.hash.split('.')[1];
-    if(pageName != currentPage) {
+    if (pageName != currentPage) {
         transition(pageName, subPageName, true);
     } else {
-        if(subPageName == null) {
+        if (subPageName == null) {
             subPageName = 'main';
         }
         transitionSubpage(subPageName, true);
     }
 }
+
 //transtition to page x
 function transition(page, subpage, hash) {
-    if(location.hash.substring(1) === page && !hash) return;
+    if (location.hash.substring(1) === page && !hash) return;
 
     var overlay = $("#transition-overlay");
     overlay.css("pointer-events", "all");
     overlay.fadeTo("slow", 1, function () {
         //transition content
         userTransition = true;
-        if(subpage == null || subpage !== 'main') {
+        if (subpage == null || subpage !== 'main') {
             location.hash = page;
         } else {
             location.hash = page + '.' + subpage;
@@ -59,13 +60,14 @@ function transition(page, subpage, hash) {
         }, 200);
     })
 }
+
 function transitionSubpage(subpage, force) {
-    if(force == null) {
+    if (force == null) {
         force = false;
     }
 
     //check if the subpage is already loaded.
-    if(!force) {
+    if (!force) {
         if (location.hash.split('.')[1] !== null && location.hash.split('.')[1] === subpage) {
             return;
         } else if (location.hash.split('.')[1] == null && subpage === 'main') {
@@ -74,19 +76,25 @@ function transitionSubpage(subpage, force) {
     }
 
     //set active sub page button.
-    //todo
+    $('#page-sublinks').children('p').each(function (i) {
+        if ($(this).text() == subpage) {
+            $(this).css("background-color", "rgba(255,255,255,0.35)");
+        } else {
+            $(this).css("background-color", "transparent");
+        }
+    });
 
     subpageTransition = true;
     $('#content').fadeTo("fast", 0, function () {
         $('#content').load('pages/' + location.hash.split('.')[0].substring(1) + '/' + subpage + '.html', function () {
             //setting hash.
-            if(subpage == 'main') {
+            if (subpage == 'main') {
                 location.hash = location.hash.split('.')[0].substring(1);
             } else {
                 location.hash = location.hash.split('.')[0].substring(1) + '.' + subpage;
             }
 
-            if(subpage == 'main') {
+            if (subpage == 'main') {
                 //removing useless tags.
                 $('#bg-url').remove();
                 $('#category').remove();
@@ -129,10 +137,10 @@ function setVideoSource(link) {
 
 //sets the content of a page
 function setContent(page, subpage, callback) {
-    if(page === null) {
+    if (page === null) {
         page = 'welcome';
     }
-    if(subpage == null) {
+    if (subpage == null) {
         subpage = 'main';
     }
 
@@ -148,9 +156,10 @@ function setContent(page, subpage, callback) {
         currentSubpage = subpage;
     });
 }
+
 //callback when the bg vid loads.
 function vidCallback(page, subpage, callback) {
-    if(subpage !== 'main') {
+    if (subpage !== 'main') {
         //load subpage content
         video.removeEventListener('loadedmetadata', vidCallback);
         $('#content').load('pages/' + page + '/' + subpage + '.html', callback);
