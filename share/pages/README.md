@@ -1,1 +1,0 @@
-HTML files inside of here are the contents for each of the pages.
