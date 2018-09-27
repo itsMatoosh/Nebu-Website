@@ -1,0 +1,145 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+.sidebar {
+    background: rgba(0, 0, 0, 0.15);
+    -ms-flex: 0 0 350px;
+    flex: 0 0 350px;
+}
+
+.submenu {
+    -ms-flex: 0 0 100px;
+    flex: 0 0 100px;
+}
+
+.navbar-element {
+    display: inline;
+    height: 10px;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.background-player {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    object-fit: cover;
+}
+
+.background-tint {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(10, 10, 70, 0.6);
+    z-index: -2;
+}
+
+.transition-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(10, 10, 70);
+    opacity: 1;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+/*The site logo*/
+#logo {
+    width: 300px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px;
+}
+#content {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/*The current page title*/
+.page-title {
+    font-family: 'Titillium Web', sans-serif;
+    position: absolute;
+    bottom: -5px;
+    color: white;
+}
+#page-title {
+    margin-right: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* paragraph */
+p {
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+/* link underline effect */
+p.underline {
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+p.underline:before {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 10px;
+    left: 0;
+    background-color: #ffdf4a;
+    content: '';
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.4s ease-in-out 0s;
+}
+
+p.underline:hover:before {
+    visibility: visible;
+    transform: scaleX(0.4);
+}
+
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+#nav div.row {
+    height: 40px;
+}
+
+/*
+button effect
+ */
+.navbar-button {
+    display: inline;
+    background: none;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.navbar-button:hover {
+    background: rgba(255,255,255,0.35);
+}
