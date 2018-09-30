@@ -12,7 +12,44 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container-fluid">
+<!-- Mobile navbar -->
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top d-block d-md-none">
+    <a class="navbar-brand" onclick="transition('welcome', null, false)"><img height="50px" style="display: block; cursor: pointer;" src="res/nebusign.gif"
+                                                                              onclick="transition('welcome', null, false)"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<div class="container-fluid" style="height: 100vh;">
     <!--Transition-foreground-->
     <div class="transition-overlay" id="transition-overlay">
         <div style="text-align: center;">
@@ -30,9 +67,9 @@
         <div class="background-tint"></div>
         <video autoplay loop class="background-player" id="background-video"></video>
     </div>
-    <div class="row" style="height: 100vh">
-        <div class="col sidebar pl-3 pr-3">
-            <!--Left toolbar-->
+    <div class="row" style="height: 100%">
+        <nav class="col sidebar pl-xl-3 pr-xl-3 d-none d-md-block">
+            <!--Navbar-->
             <div class="row" style="height: 30vh;">
                 <div class="col">
                     <div style="text-align: center;">
@@ -61,10 +98,8 @@
                     </div>
                 </nav>
             </div>
-        </div>
-        <div class="col-1">
-        </div>
-        <div class="col">
+        </nav>
+        <div class="col ml-lg-1 ml-lg-1 ml-xl-5 mr-xl-5">
             <!--Content bar-->
             <div class="row" style="height: 30vh;">
                 <div class="col">
@@ -82,9 +117,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-1">
-        </div>
-
     </div>
 </div>
 <script src="js/pageManager.js"></script>
