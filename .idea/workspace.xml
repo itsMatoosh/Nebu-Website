@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="425633b4-08d0-4a04-8269-45d496bb2eb8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/js/scrollSetup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/welcome/welcome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/pageManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/pageManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/bar/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/bar/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/grill/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/grill/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/lounge/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/lounge/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/restaurant/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/restaurant/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/welcome/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/welcome/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/shisha_background.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/res/lounge_background.mp4" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,20 +55,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
               <caret line="45" column="43" lean-forward="true" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+=======
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="82" column="57" selection-start-line="82" selection-start-column="57" selection-end-line="82" selection-end-column="57" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#nav#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> c26bff4acbfa52a487963b7980ad3e828bc1fd81
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/scrollSetup.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
               <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+=======
+      <file leaf-file-name="scrollSetup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/scrollSetup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageManager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/pageManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-577">
+              <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+>>>>>>> c26bff4acbfa52a487963b7980ad3e828bc1fd81
             </state>
           </provider>
         </entry>
@@ -186,15 +207,18 @@
         <option value="$PROJECT_DIR$/pages/lounge/fireplace.html" />
         <option value="$PROJECT_DIR$/js/pageManager.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/pages/welcome/welcome.css" />
         <option value="$PROJECT_DIR$/pages/welcome/main.html" />
         <option value="$PROJECT_DIR$/pages/lounge/main.html" />
         <option value="$PROJECT_DIR$/pages/grill/main.html" />
         <option value="$PROJECT_DIR$/pages/bar/main.html" />
         <option value="$PROJECT_DIR$/js/scrollSetup.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/pages/restaurant/main.html" />
         <option value="$PROJECT_DIR$/pages/restaurant/Menu.css" />
+=======
+        <option value="$PROJECT_DIR$/index.html" />
+>>>>>>> c26bff4acbfa52a487963b7980ad3e828bc1fd81
       </list>
     </option>
   </component>
@@ -280,7 +304,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="24254000" />
+=======
+    <option name="totallyTimeSpent" value="22515000" />
+>>>>>>> c26bff4acbfa52a487963b7980ad3e828bc1fd81
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -392,6 +420,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -399,6 +428,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> c26bff4acbfa52a487963b7980ad3e828bc1fd81
     <entry file="file://$PROJECT_DIR$/pages/welcome/contact.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -416,6 +447,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/pages/restaurant/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -430,6 +462,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/pages/lounge/main.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/grill/main.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/bar/main.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/scrollSetup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pageManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-577">
+          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="82" column="57" selection-start-line="82" selection-start-column="57" selection-end-line="82" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#nav#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+>>>>>>> c26bff4acbfa52a487963b7980ad3e828bc1fd81
         </state>
       </provider>
     </entry>
