@@ -4,9 +4,15 @@ html {
 }
 
 .sidebar {
-    background: rgba(0, 0, 0, 0.2);
-    -ms-flex: 0 0 350px;
-    flex: 0 0 350px;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    pointer-events: auto;
+    width: 350px;
+    z-index: 10;
+}
+.black-tint {
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .submenu {
@@ -24,18 +30,24 @@ html {
     height: 100%;
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
     z-index: -2;
+    pointer-events: none;
 }
 
 .background-player {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: -3;
     object-fit: cover;
+}
+#background-video {
+    z-index: -4;
+}
+#background-video2 {
+    z-index: -3;
 }
 
 .background-tint {
@@ -66,22 +78,10 @@ html {
     position: absolute;
     bottom: 0px;
 }
-#content {
-    margin-left: 5px;
-    margin-right: 5px;
-}
 
-/*The current page title*/
-.page-title {
-    font-family: 'Titillium Web', sans-serif;
-    position: absolute;
-    bottom: -5px;
-    color: white;
-}
-#page-title {
-    margin-right: 12px;
-    text-decoration: underline;
-    cursor: pointer;
+/*container for each of the categories*/
+.category-container {
+    height: 100vh;
 }
 
 /* paragraph */

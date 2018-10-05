@@ -1,16 +1,17 @@
-<div id="bg-url">res/welcome_background.mp4</div>
-<div id="category">welcome</div>
-<div id="subpages">contact</div>
-
-<div class="row">
-    <div class="col">
-        <p>NEBU is based in nebusice, czech republic. Nebusice is a small diverse community, in the nations capital prague,
-            the home of a hundred towers. Prague is not only rich in history, it is just as rich in many different culinary
-            ventures.</p>
-    </div>
-    <div class="col">
-        <img src="pages/welcome/main.jpg"
-             width="500px">
-
+<link rel="stylesheet" href="pages/welcome/welcome.css">
+<div class="row h-100">
+    <div class="col d-flex justify-content-center">
+        <div class="img-fluid align-self-center w-75">
+            <img src="res/nebusign.gif" class="w-100">
+            <div style="height: 10px"></div>
+            <div class="row">
+                <div class="col"><p class="welcome-button underline text-center" onclick="$.scrollify.move('#restaurant');">restaurant</p></div>
+                <div class="col"><p class="welcome-button underline text-center" onclick="$.scrollify.move('#bar');">bar</p></div>
+                <div class="col"><p class="welcome-button underline text-center" onclick="$.scrollify.move('#grill');">grill</p></div>
+                <div class="col"><p class="welcome-button underline text-center" onclick="$.scrollify.move('#lounge');">lounge</p></div>
+            </div>
+            <div style="height: 10px"></div>
+            <p class="motto text-center">The ultimate experience in art, food and love at the heart of Nebušicé</p>
+        </div>
     </div>
 </div>

@@ -1,64 +1,35 @@
 //init video
 var source = document.createElement('source');
 source.id = 'source';
+var source2 = document.createElement('source');
+source2.id = 'source2';
 var video = document.getElementById('background-video');
 video.appendChild(source);
-var userTransition = false;
+var video2 = document.getElementById('background-video2');
+video2.appendChild(source2);
+source.setAttribute("src", "res/welcome_background.mp4");
+
+
 var subpageTransition = false;
 
 //page/subpage vars
 var currentPage;
 var currentSubpage;
 
-//check if need to transition
-if (location.hash !== null && location.hash !== '') {
-    hashTransition();
-} else {
-    transition('welcome', null, true);
-}
-window.onhashchange = function () {
-    if (!userTransition && !subpageTransition) {
-        hashTransition();
+//establishing categories.
+var categories = ["welcome", "restaurant", "grill", "bar", "lounge"];
+
+//loading all the categories.
+loadCategories();
+
+//loads categories
+function loadCategories() {
+    for (let i = 0; i < categories.length; i++) {
+        //load each.
+        $(".content-append").append("<div class='category-container' id='category-" + categories[i] + "' data-section-name='" + categories[i] + "'></div>");
+        $("#category-" + categories[i]).load('pages/' + categories[i] + '/' + 'main.html');
     }
-};
-
-//transition to location hash
-function hashTransition() {
-    var pageName = location.hash.split('.')[0].substring(1);
-    var subPageName = location.hash.split('.')[1];
-    if (pageName != currentPage) {
-        transition(pageName, subPageName, true);
-    } else {
-        if (subPageName == null) {
-            subPageName = 'main';
-        }
-        transitionSubpage(subPageName, true);
-    }
-}
-
-//transtition to page x
-function transition(page, subpage, hash) {
-    if (location.hash.substring(1) === page && !hash) return;
-
-    var overlay = $("#transition-overlay");
-    overlay.css("pointer-events", "all");
-    overlay.fadeTo("slow", 1, function () {
-        //transition content
-        userTransition = true;
-        if (subpage == null || subpage !== 'main') {
-            location.hash = page;
-        } else {
-            location.hash = page + '.' + subpage;
-        }
-
-        //fade out
-        setTimeout(function () {
-            setContent(page, subpage, function () {
-                transitionOut();
-                page = page;
-            });
-        }, 200);
-    })
+    loadingScreenOut();
 }
 
 function transitionSubpage(subpage, force) {
@@ -108,31 +79,19 @@ function transitionSubpage(subpage, force) {
     });
 }
 
+//fade the loading screen in.
+function loadingScreenIn() {
+    var overlay = $("#transition-overlay");
+    overlay.fadeTo("slow", 1, function () {
+        overlay.css("pointer-events", "all");
+    });
+};
 //fade the loading screen out
-function transitionOut() {
+function loadingScreenOut() {
     var overlay = $("#transition-overlay");
     overlay.fadeTo("slow", 0, function () {
         overlay.css("pointer-events", "none");
-        userTransition = false;
     });
-}
-
-//set the background video
-function setBg() {
-    setVideoSource(document.getElementById('bg-url').innerText);
-    document.getElementById('bg-url').remove();
-}
-
-//set the source for the video element
-function setVideoSource(link) {
-    var video = document.getElementById('background-video');
-    var source = document.getElementById('source');
-    video.pause();
-
-    source.setAttribute('src', link);
-
-    video.load();
-    video.play();
 }
 
 //sets the content of a page
@@ -145,7 +104,6 @@ function setContent(page, subpage, callback) {
     }
 
     $('#content').load('pages/' + page + '/' + 'main.html', function () {
-        $("#page-title").text($('#category').text());
         $('#category').remove();
 
         video.addEventListener('loadedmetadata', vidCallback(page, subpage, callback));

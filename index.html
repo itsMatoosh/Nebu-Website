@@ -13,112 +13,106 @@
 </head>
 <body>
 <!-- Mobile navbar -->
-<nav class="navbar navbar-expand-sm navbar-dark fixed-top d-block d-md-none">
-    <a class="navbar-brand" onclick="transition('welcome', null, false)"><img height="50px" style="display: block; cursor: pointer;" src="res/nebusign.gif"
+<nav id="navbar-top" class="navbar navbar-expand navbar-dark fixed-top d-block d-md-none black-tint">
+    <a class="navbar-brand" onclick="transition('welcome', null, false)"><img height="50px"
+                                                                              style="display: block; cursor: pointer;"
+                                                                              src="res/nebusign.gif"
                                                                               onclick="transition('welcome', null, false)"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">restaurant <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+                <a class="nav-link" href="#">grill</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link" href="#">bar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">lounge</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </div>
 </nav>
-<div class="container-fluid" style="height: 100vh;">
-    <!--Transition-foreground-->
-    <div class="transition-overlay" id="transition-overlay">
-        <div style="text-align: center;">
-            <div style="position: absolute; width: 100%; top:35vh;">
-                <div style="text-align: center;">
-                    <div><img src="res/nebulogo-big.gif" width="30%"></div>
-                </div>
+<!--XL navbar-->
+<nav class="sidebar pl-xl-3 pr-xl-3 d-none d-md-block black-tint">
+    <!--Navbar-->
+    <div class="row" style="height: 30vh;">
+        <div class="col">
+            <div style="text-align: center;">
+                <img id="logo" style="display: block; cursor: pointer;" src="res/nebusign.gif"
+                     title="Click to go back to NEBU homepage" onclick="$.scrollify.move('#welcome');"></img>
             </div>
-            <div style="height: 35vh;"></div>
-
         </div>
     </div>
-    <!--Background-->
-    <div class="background">
-        <div class="background-tint"></div>
-        <video autoplay loop class="background-player" id="background-video"></video>
-    </div>
-    <div class="row" style="height: 100%">
-        <nav class="col sidebar pl-xl-3 pr-xl-3 d-none d-md-block">
-            <!--Navbar-->
-            <div class="row" style="height: 30vh;">
-                <div class="col">
-                    <div style="text-align: center;">
-                        <img id="logo" style="display: block; cursor: pointer;" src="res/nebusign.gif"
-                             title="Click to go back to NEBU homepage" onclick="transition('welcome', null, false)"></img>
-                    </div>
+    <div style="height: 40px;"></div>
+    <div id="nav" class="row h-25 text-center">
+        <nav class="col stroke" >
+            <div class="row">
+                <div class="col"><p class="h3 underline no-select" onclick="$.scrollify.move('#restaurant');">
+                    restaurant</p></div>
+            </div>
+            <div class="row">
+                <div class="col"><p class="h3 underline no-select" onclick="$.scrollify.move('#grill');">grill</p>
                 </div>
             </div>
-            <div style="height: 40px;"></div>
-            <div id="nav" class="row h-25 text-center">
-                <nav class="col stroke">
-                    <div class="row">
-                        <div class="col"><p class="h3 underline no-select" onclick="transition('restaurant',null, false);">
-                                restaurant</p></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><p class="h3 underline no-select" onclick="transition('grill',null, false);">grill</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><p class="h3 underline no-select" onclick="transition('bar',null, false);">bar</p></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><p class="h3 underline no-select" onclick="transition('lounge',null, false);">lounge</p>
-                        </div>
-                    </div>
-                </nav>
+            <div class="row">
+                <div class="col"><p class="h3 underline no-select" onclick="$.scrollify.move('#bar');">bar</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"><p class="h3 underline no-select" onclick="$.scrollify.move('#lounge');">
+                    lounge</p>
+                </div>
             </div>
         </nav>
+    </div>
+</nav>
+
+<!--Transition-foreground-->
+<div class="transition-overlay" id="transition-overlay">
+    <div style="text-align: center;">
+        <div style="position: absolute; width: 100%; top:35vh;">
+            <div style="text-align: center;">
+                <div><img src="res/nebulogo-big.gif" width="30%"></div>
+            </div>
+        </div>
+        <div style="height: 35vh;"></div>
+
+    </div>
+</div>
+<!--Background-->
+<div class="background">
+    <div class="background-tint"></div>
+    <video autoplay loop class="background-player" id="background-video"></video>
+    <video autoplay loop class="background-player" id="background-video2"></video>
+</div>
+
+<!--Content-->
+<div class="container-fluid" style="height: 100vh;">
+    <div id="content-container" class="row" style="height: 100%">
+        <div id="navbar-column" class="d-none d-md-block" style="width: 350px;"></div>
         <div class="col ml-lg-1 ml-lg-1 ml-xl-5 mr-xl-5">
             <!--Content bar-->
-            <div class="row" style="height: 30vh;">
-                <div class="col">
-                    <div class="page-title" style="white-space: nowrap; text-decoration: none;">
-                        <h3 id="page-title" class="navbar-element no-select" onclick="transitionSubpage('main')">title</h3>
-                        <div id="page-sublinks" style="display: inline;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="height: 15px;"></div>
-            <div class="row h-25 text-left">
-                <div class="col" id="content">
+            <div style="height: 90px;" class="d-block d-md-none"></div>
+
+            <div class="row h-25">
+                <div class="col content-append">
 
                 </div>
             </div>
+
         </div>
     </div>
 </div>
+<script src="js/scrollify/jquery.scrollify.js"></script>
 <script src="js/pageManager.js"></script>
+<script src="js/scrollSetup.js"></script>
 </body>
 </html>
